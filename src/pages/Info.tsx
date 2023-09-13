@@ -73,7 +73,7 @@ const Info = () => {
       };
     
       // Handle code changes
-      const handleCodeChange = (newCode) => {
+      const handleCodeChange = (newCode:any) => {
         console.log('Code changed:', newCode);
       };
 

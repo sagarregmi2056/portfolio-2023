@@ -3,7 +3,7 @@ import { Button } from "../atoms/ui/button"
 import { Input } from "../atoms/ui/input"
 import { Label } from "../atoms/ui/label"
 import { AiOutlineLinkedin,AiFillFolderOpen } from "react-icons/ai";
-import { BiLogoReact,BiLogoJavascript,BiLogoCss3 ,BiSolidFolderOpen,BiLogoGit, BiLogoNodejs,BiCopyright} from "react-icons/bi";
+import { BiLogoReact,BiLogoJavascript,BiLogoCss3 ,BiSolidFolderOpen,BiLogoGit, BiLogoNodejs} from "react-icons/bi";
 import { VscFolderActive } from "react-icons/vsc";
 
 

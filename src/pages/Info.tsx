@@ -3,6 +3,7 @@ import { Button } from "../atoms/ui/button"
 import '../assets/css/global.css'
 import { BiLogoReact ,BiSolidPhone,BiLogoGmail, BiLogoGithub,BiLogoFacebookCircle,BiLogoLinkedinSquare,BiCamera} from "react-icons/bi";
 import { DiNodejs } from "react-icons/di";
+import  { useEffect } from 'react';
 import { SiExpress,SiNestjs ,SiTypescript,SiMongodb ,SiPostgresql,SiMysql } from "react-icons/si";
 import {
     Card,
@@ -31,6 +32,16 @@ const Info = () => {
     const emailAddress = 'sagarregmi2056@gmail.com';
     const fontStyles = {color: 'blue',fontSize: '25px', padding:'2px',margin: '5px'};
     const fontStylestech = {color: 'white',fontSize: '35px', padding:'2px',margin: '3px'};
+
+    useEffect(() => {
+        const lines = document.querySelectorAll('.fake-terminal pre');
+    
+        lines.forEach((line, index) => {
+          setTimeout(() => {
+            line.classList.remove('hidden');
+          }, index * 1); // Adjust the delay (in milliseconds) between each line
+        });
+      }, []);
 
 
     const initialCode = `
@@ -204,8 +215,8 @@ const Info = () => {
       <TabsList className="grid w-full grid-cols-4 pb-4 mb-4 bg-inherit">
         <TabsTrigger  value="account" >OUTPUT</TabsTrigger>
         <TabsTrigger value="terminal">TERMINAL</TabsTrigger>
-        <TabsTrigger value="ports">About me</TabsTrigger>
-        <TabsTrigger value="gitlens">Photo</TabsTrigger>
+        <TabsTrigger value="ports">COMMENTS</TabsTrigger>
+        <TabsTrigger value="gitlens">PHOTO</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card className='bg-transparent '>
@@ -236,25 +247,25 @@ const Info = () => {
       <TabsContent value="terminal">
         <Card className='bg-transparent pl-2 '>
         <div className="bg-gray-900 p-4">
-      <div className="fake-terminal p-2">
-        <pre className="text-green-400">&gt; git status</pre>
-        <pre className="text-blue-300">On branch main</pre>
-        <pre className="text-blue-300">Your branch is up to date with 'origin/main'.</pre>
-        <pre className="text-red-400">Changes not staged for commit:</pre>
-        <pre className="text-red-400">  (use "git add file..." to update what will be committed)</pre>
-        <pre className="text-red-400">  (use "git checkout -- file..." to discard changes in working directory)</pre>
-        <pre className="text-yellow-400">You have untracked files:</pre>
-    <pre className="text-yellow-400">  (use "git add file..." to include in what will be committed)</pre>
-    <pre className="text-yellow-400">         file-1.txt</pre>
-    <pre className="text-yellow-400">         file-2.txt</pre>
-    <pre className="text-blue-300">Commit your changes:</pre>
-    <pre className="text-blue-300">&gt; git commit -m "Initial commit"</pre>
-    <pre className="text-green-400">[main b3a425a] Initial commit</pre>
-    <pre className="text-green-400">1 file changed, 0 insertions(+), 0 deletions(-)</pre>
-    <pre className="text-blue-300">Push to remote repository:</pre>
-    <pre className="text-blue-300">&gt; git push origin main</pre>
-    <pre className="text-green-400">Enumerating objects: 3, done.</pre>
-    <pre className="text-green-400">Counting objects: 100% (3/3), done.</pre>
+      <div className="fake-terminal p-2 ">
+        <pre className="text-green-400 typewriter-animation">&gt; git status</pre> <br />
+        <pre className="text-blue-300 typewriter-animation">On branch main</pre>
+        <pre className="text-blue-300 typewriter-animation">Your branch is up to date with 'origin/main'.</pre>
+        <pre className="text-red-400 typewriter-animation">Changes not staged for commit:</pre>
+        <pre className="text-red-400 typewriter-animation">  (use "git add file..." to update what will be committed)</pre>
+        <pre className="text-red-400 typewriter-animation">  (use "git checkout -- file..." to discard changes in working directory)</pre>
+        <pre className="text-yellow-400 typewriter-animation">You have untracked files:</pre>
+    <pre className="text-yellow-400 typewriter-animation">  (use "git add file..." to include in what will be committed)</pre>
+    <pre className="text-yellow-400typewriter-animation">         file-1.txt</pre>
+    <pre className="text-yellow-400 typewriter-animation">         file-2.txt</pre> <br />
+    <pre className="text-blue-300 typewriter-animation">Commit your changes:</pre>
+    <pre className="text-blue-300 typewriter-animation">&gt; git commit -m "Initial commit"</pre>
+    <pre className="text-green-400 typewriter-animation">[main b3a425a] Initial commit</pre>
+    <pre className="text-green-400 typewriter-animation">1 file changed, 0 insertions(+), 0 deletions(-)</pre>
+    <pre className="text-blue-300 typewriter-animation">Push to remote repository:</pre>
+    <pre className="text-blue-300 typewriter-animation">&gt; git push origin main</pre>
+    <pre className="text-green-400 typewriter-animation">Enumerating objects: 3, done.</pre>
+    <pre className="text-green-400  typewriter-animation">Counting objects: 100% (3/3), done.</pre>
         {/* More output lines can be added here */}
       </div>
     </div>

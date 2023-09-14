@@ -95,3 +95,31 @@
 .animate-blink {
   animation: blink 0.8s infinite;
 }
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  animation-duration: 2s; /* Increase the duration to slow down the typing */
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.typewriter-animation {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #fff; /* Optional: Add a blinking cursor */
+  animation: typing 2s steps(40, end), blink-caret 0.75s infinite alternate;
+}

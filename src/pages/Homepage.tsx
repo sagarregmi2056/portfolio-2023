@@ -23,17 +23,17 @@ import { PiCopySimpleBold } from "react-icons/pi";
 import {RxCross2} from "react-icons/rx";
 import { BsFiles,BsThreeDots } from "react-icons/bs";
 import { LiaSearchSolid } from "react-icons/lia";
-import {DiGitBranch } from "react-icons/di";
+
 import {RxAvatar } from "react-icons/rx";
-import { BiLogoReact,BiLogoJavascript,BiLogoCss3 ,BiSolidFolderOpen,BiLogoGit, BiLogoNodejs,BiCopyright} from "react-icons/bi";
+import { BiCopyright} from "react-icons/bi";
 
 
 
 
 
-import { VscExtensions,VscVmConnect,VscGithub,VscLiveShare} from "react-icons/vsc";
+import { VscExtensions,VscVmConnect,VscGithub} from "react-icons/vsc";
 import { FaCodeBranch } from "react-icons/fa6";
-import { RiSignalTowerFill} from "react-icons/ri";
+
 
 
 
